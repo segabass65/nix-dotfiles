@@ -2,60 +2,29 @@
   "display": {
     "separator": " -> "
   },
-  "logo": {
-    "padding": {
-      "top": 3
-    }
-  },
   "modules": [
-    "title",
-    "separator",
-    "break",
     {
       "type": "custom",
       "format": " ENVIRONMENT",
       "outputColor": "green"
     },
     {
-      "type": "gpu",
-      "key": "├󱁤 GPU Driver",
-      "keyColor": "green",
-      "format": "{driver}"
-    },
-    {
       "type": "shell",
       "key": "├ Shell",
       "keyColor": "green",
-      "format": "{process-name} {version}"
-    },
-    {
-      "type": "lm",
-      "key": "├󰍂 DM",
-      "keyColor": "green"
+      "format": "{pretty-name} {version}"
     },
     {
       "type": "wm",
       "key": "├ WM",
       "keyColor": "green",
-      "format": "{process-name} {version}"
-    },
-    {
-      "type": "de",
-      "key": "├ DE",
-      "keyColor": "green",
-      "format": "{process-name} {version}"
+      "format": "{pretty-name} ({protocol-name}) {version}"
     },
     {
       "type": "terminal",
       "key": "├ Terminal",
       "keyColor": "green",
-      "format": "{process-name} {version}"
-    },
-    {
-      "type": "editor",
-      "key": "└ Text Editor",
-      "keyColor": "green",
-      "format": "{name} {version}"
+      "format": "{pretty-name} {version}"
     },
     "break",
     {
@@ -89,13 +58,19 @@
       "format": "{name} {version}"
     },
     {
+      "type": "gpu",
+      "key": "├󱁤 Driver",
+      "keyColor": "yellow",
+      "format": "{driver}"
+    },
+    {
       "type": "packages",
       "key": "├󰏗 Packages",
       "keyColor": "yellow"
     },
     {
       "type": "disk",
-      "key": "└󰃭 Age",
+      "key": "├󰃭 Age",
       "keyColor": "yellow",
       "folders": "/",
       "format": "{days} days"
@@ -127,7 +102,7 @@
     },
     {
       "type": "command",
-      "key": "└ Storage",
+      "key": "├󰋊 Storage",
       "keyColor": "red",
       "text": "lsblk -dbno SIZE | awk '{sum+=$1} END {printf \"%.2f GiB\\n\", sum / 1024^3}'"
     },
