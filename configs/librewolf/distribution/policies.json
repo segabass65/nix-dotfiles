@@ -34,12 +34,6 @@
                 "private_browsing": true, 
                 "default_area": "menupanel"
             },
-            "{73a6fe31-595d-460b-a920-fcc0f8843232}": {
-                "install_url": "https://addons.mozilla.org/firefox/downloads/latest/{73a6fe31-595d-460b-a920-fcc0f8843232}/latest.xpi",
-                "installation_mode": "normal_installed",
-                "private_browsing": true, 
-                "default_area": "navbar"
-            },
             "{bbb880ce-43c9-47ae-b746-c3e0096c5b76}": {
                 "install_url": "https://addons.mozilla.org/firefox/downloads/latest/{bbb880ce-43c9-47ae-b746-c3e0096c5b76}/latest.xpi",
                 "installation_mode": "normal_installed",
