@@ -11,16 +11,16 @@
 
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-label/NIXROOT";
+      device = "/dev/disk/by-label/ROOT";
       fsType = "ext4";
     };
     "/boot" = {
-      device = "/dev/disk/by-label/NIXBOOT";
+      device = "/dev/disk/by-label/BOOT";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
     "/home" = {
-      device = "/dev/disk/by-label/NIXHOME";
+      device = "/dev/disk/by-label/HOME";
       fsType = "ext4";
     };
     "/games" = {
@@ -31,8 +31,12 @@
       device = "/dev/disk/by-label/DATA";
       fsType = "ext4";
     };
-    "/var/lib/libvirt" = {
-      device = "/dev/disk/by-label/LIBVIRT";
+    "/vm" = {
+      device = "/dev/disk/by-label/VM";
+      fsType = "ext4";
+    };
+    "/repos" = {
+      device = "/dev/disk/by-label/REPOS";
       fsType = "ext4";
     };
   };
