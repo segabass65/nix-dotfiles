@@ -80,20 +80,6 @@
                 "installation_mode": "blocked"
             }
         },
-        "Preferences": {
-            "browser.translations.enable": false,
-            "dom.event.contextmenu.enabled": false,
-            "layers.acceleration.force-enabled": true,
-            "media.videocontrols.picture-in-picture.enabled": false,
-            "privacy.fingerprintingProtection.overrides": "+AllTargets,-CSSPrefersColorScheme,-FrameRate",
-            "webgl.disabled": false,
-            "browser.startup.page": 3,
-            "browser.toolbars.bookmarks.visibility": "never",
-            "extensions.activeThemeID": "{76aabc99-c1a8-4c1e-832b-d4f2941d5a7a}",
-            "gfx.webrender.all": true,
-            "layout.css.prefers-color-scheme.content-override": 0,
-            "ui.systemUsesDarkTheme": true
-        },
         "SearchEngines": {
             "PreventInstalls": false,
             "Remove": [
