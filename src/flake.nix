@@ -68,9 +68,11 @@
               useGlobalPkgs = true;
               users = {
                 segabass65 = {
-                  home.username = "segabass65";
-                  home.homeDirectory = "/home/segabass65";
-                  home.stateVersion = "25.11";
+                  _module.args.username = "segabass65";
+                  
+                  imports = [
+                    ./users/segabass65
+                  ];
                 };
               };
               useUserPackages = true;
@@ -112,11 +114,7 @@
         };
 
         modules = [
-          {
-            home.username = "segabass65";
-            home.homeDirectory = "/home/segabass65";
-            home.stateVersion = "25.11";
-          }
+          ./users/${username}
         ];
 
         pkgs = pkgsStable;

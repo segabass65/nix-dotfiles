@@ -7,7 +7,6 @@
     cmus
     efibootmgr
     eww
-    fastfetch
     feh
     freetube
     git
