@@ -2,7 +2,6 @@
   environment.systemPackages = with pkgs; [
     argbash
     aseprite
-    cava
     cmatrix
     cmus
     efibootmgr
