@@ -14,7 +14,6 @@
     gum
     htop
     hyprpaper
-    kitty
     libreoffice-qt-fresh
     librewolf-bin
     lutris
@@ -47,9 +46,5 @@
     wmutils-core
     xclip
     xtitle
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
   ];
 }
