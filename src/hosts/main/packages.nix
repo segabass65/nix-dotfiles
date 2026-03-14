@@ -12,6 +12,7 @@
     git
     git-filter-repo
     gum
+    home-manager
     htop
     hyprpaper
     libreoffice-qt-fresh
