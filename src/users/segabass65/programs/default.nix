@@ -4,5 +4,6 @@
     ./kitty.nix
     ./misc.nix
     ./picom.nix
+    ./polybar.nix
   ];
 }

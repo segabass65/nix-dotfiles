@@ -20,7 +20,6 @@
     maim
     nftables
     p7zip
-    polybar
     prismlauncher
     protonup-qt
     qbittorrent
