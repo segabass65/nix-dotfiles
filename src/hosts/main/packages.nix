@@ -1,19 +1,12 @@
 { pkgs, ... }: {
   environment.systemPackages = with pkgs; [
     argbash
-    aseprite
     cmatrix
-    cmus
     efibootmgr
-    eww
-    feh
-    freetube
     git
     git-filter-repo
-    gum
     home-manager
     htop
-    hyprpaper
     libreoffice-qt-fresh
     lutris
     maim
@@ -22,12 +15,7 @@
     prismlauncher
     protonup-qt
     qbittorrent
-    qutebrowser
-    rofi
-    sleek-todo
     smartmontools
-    spotdl
-    toilet
     tree
     tty-clock
     unrar
