@@ -3,6 +3,7 @@
     ./fastfetch.nix
     ./kitty.nix
     ./librewolf
+    ./zsh.nix
   ];
 
   programs = {
