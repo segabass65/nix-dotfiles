@@ -24,19 +24,15 @@
   }: {
 
     nixosConfigurations = {
-      main = let
-        hostName = "main";
+      pc = let
+        hostName = "pc";
         platform = "x86_64-linux";
-
-        theme = "mocha";
 
         pkgsSettings = {
           system = platform;
           config = {
             allowUnfree = true;
             permittedInsecurePackages = [
-              "librewolf-bin-148.0-1"
-              "librewolf-bin-unwrapped-148.0-1"
               "ventoy-qt5-1.1.10"
             ];
           };
@@ -78,7 +74,6 @@
 
         specialArgs = {
           inherit hostName platform;
-          inherit theme;
           inherit pkgsUnstable;
         };
       };
