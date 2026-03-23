@@ -5,7 +5,6 @@ in {
   home-manager.users.${username} = {
     imports = [
       "${self}/users/${username}"
-      inputs.catppuccin.homeModules.catppuccin
     ];
 
     home = { inherit username; };

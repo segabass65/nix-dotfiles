@@ -63,18 +63,14 @@
 
     homeConfigurations = {
       segabass65 = let
-        pkgsSettings = {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
-        };
-
-        pkgs = import nixpkgs pkgsSettings;
-        pkgsUnstable = import nixpkgs-unstable pkgsSettings;
+        os = self.nixosConfigurations.pc;
 
       in home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+        pkgs = os.pkgs;
 
-        extraSpecialArgs = { inherit pkgsUnstable; };
+        extraSpecialArgs = {
+          osConfig = os.config;
+        } // (os.config.home-manager.extraSpecialArgs);
 
         modules = let
           username = "segabass65";
@@ -83,7 +79,6 @@
           {
             imports = [
               ./users/${username}
-              catppuccin.homeModules.catppuccin
             ];
 
             home = { inherit username; };

@@ -1,9 +1,10 @@
-{ config, ... }: {
+{ config, inputs, ... }: {
   imports = [
     ./catppuccin.nix
     ./programs
     ./services
     ./xsession
+    inputs.catppuccin.homeModules.catppuccin
   ];
 
   home = {
