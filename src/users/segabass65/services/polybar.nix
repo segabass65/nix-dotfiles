@@ -21,7 +21,7 @@
       };
 
       "bar/bspwm" = {
-        modules-left = "arch bspwm-workspaces";
+        modules-left = "nixos bspwm-workspaces";
         modules-right = "bspwm-flags bspwm-keyboard bspwm-date";
 
         background = "\${colors.crust}";
@@ -42,6 +42,13 @@
         type = "custom/text";
 
         label = "   ";
+        label-background = "\${colors.mantle}";
+      };
+
+      "module/nixos" = {
+        type = "custom/text";
+
+        label = "   ";
         label-background = "\${colors.mantle}";
       };
 
