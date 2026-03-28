@@ -10,9 +10,7 @@
   ];
 
   boot.loader.systemd-boot.enable = true;
-
   catppuccin.enable = true;
-
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   system.stateVersion = "25.11";
 

@@ -5,7 +5,14 @@
 
   boot = {
     blacklistedKernelModules = [ "nouveau" ];
-    initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" ];
+    initrd.availableKernelModules = [
+      "nvme"
+      "xhci_pci"
+      "ahci"
+      "usb_storage"
+      "usbhid"
+      "sd_mod"
+    ];
     kernelModules = [ "kvm-intel" ];
   };
 
