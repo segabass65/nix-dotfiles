@@ -1,6 +1,5 @@
 { config, inputs, osConfig, ... }: {
   imports = [
-    ./catppuccin.nix
     ./programs
     ./services
     ./xsession
