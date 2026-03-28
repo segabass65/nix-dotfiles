@@ -34,34 +34,57 @@
   } @ inputs: {
 
     lib = {
-      homeManagerConfiguration = {
-        home-manager,
-        os,
-        username
-      }: home-manager.lib.homeManagerConfiguration {
+      nixos = {
+        dir = hostName: ./hosts/${hostName};
 
-        pkgs = os.pkgs;
+        system = {
+          nixpkgs,
+          hostName,
+          pkgsSettings,
+          specialArgs,
+          ...
+        }: nixpkgs.lib.nixosSystem {
+          modules = [
+            {
+              imports = [ (self.lib.nixos.dir hostName) ];
+              networking = { inherit hostName; };
+              nixpkgs = pkgsSettings;
+            }
+          ];
 
-        extraSpecialArgs = {
-          osConfig = os.config;
-        } // (os.config.home-manager.extraSpecialArgs);
+          specialArgs = {
+            inherit inputs;
+          } // (specialArgs);
+        };
+      };
 
-        modules = [
-          {
-            imports = [
-              ./users/${username}
-            ];
+      homeManager = {
+        dir = username: ./users/${username};
 
-            home = { inherit username; };
-          }
-        ];
+        config = {
+          home-manager,
+          os,
+          username
+        }: home-manager.lib.homeManagerConfiguration {
+
+          pkgs = os.pkgs;
+
+          extraSpecialArgs = {
+            osConfig = os.config;
+          } // (os.config.home-manager.extraSpecialArgs);
+
+          modules = [
+            {
+              imports = [ (self.lib.homeManager.dir username) ];
+              home = { inherit username; };
+            }
+          ];
+        };
       };
     };
 
     nixosConfigurations = {
       pc = let
-        hostName = "pc";
-
         pkgsSettings = {
           system = "x86_64-linux";
           config = {
@@ -71,30 +94,20 @@
             ];
           };
         };
+
+      in self.lib.nixos.system {
+        inherit nixpkgs pkgsSettings;
         
-        pkgsUnstable = import nixpkgs-unstable pkgsSettings;
-
-      in nixpkgs.lib.nixosSystem {
-        modules = [
-          {
-            imports = [
-              ./hosts/${hostName}
-            ];
-
-            networking = { inherit hostName; };
-            nixpkgs = pkgsSettings;
-          }
-        ];
+        hostName = "pc";
 
         specialArgs = {
-          inherit inputs;
-          inherit pkgsUnstable;
+          pkgsUnstable = import nixpkgs-unstable pkgsSettings;
         };
       };
     };
 
     homeConfigurations = {
-      segabass65 = self.lib.homeManagerConfiguration {
+      "segabass65@pc" = self.lib.homeManager.config {
         inherit home-manager;
 
         os = self.nixosConfigurations.pc;
