@@ -11,7 +11,7 @@
 
   boot = {
     loader.systemd-boot.enable = true;
-    kernelPackages = pkgs.linuxPackagesFor pkgs.linuxKernel.kernels.linux_zen;
+    kernelPackages = pkgs.linuxPackages_zen;
   };
   
   catppuccin.enable = true;
