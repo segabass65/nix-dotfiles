@@ -4,6 +4,7 @@
   ];
 
   boot = {
+    extraModulePackages = [ config.boot.kernelPackages.yt6801 ];
     initrd.availableKernelModules = [
       "nvme"
       "xhci_pci"
