@@ -1,4 +1,4 @@
-{ isServer, ... }: let
+{ config, isServer, pkgs, ... }: let
   modules = {
     server = [
       ./fastfetch.nix
@@ -15,6 +15,29 @@ in {
 
   programs = {
     cava.enable = !isServer;
+
+    git = {
+      enable = true;
+      settings = {
+        user = {
+          name = config.home.username;
+          email = "andreypiskunov2008@gmail.com";
+        };
+      };
+    };
+
     home-manager.enable = true;
+    lutris.enable = !isServer;
+    neovim.enable = true;
+    onlyoffice.enable = !isServer;
+    rtorrent.enable = true;
+    uv.enable = true;
+    vesktop.enable = !isServer;
+    vifm.enable = true;
+
+    vscode = {
+      enable = !isServer;
+      package = pkgs.vscodium;
+    };
   };
 }

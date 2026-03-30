@@ -1,6 +1,7 @@
 { config, inputs, isServer, osConfig, ... }: let
   modules = {
     server = [
+      ./packages.nix
       ./programs
       inputs.catppuccin.homeModules.catppuccin
     ];

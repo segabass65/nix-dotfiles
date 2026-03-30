@@ -1,4 +1,4 @@
-{ config, lib, modulesPath, ... }: {
+{ config, lib, modulesPath, pkgs, ... }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -15,6 +15,8 @@
     ];
     kernelModules = [ "kvm-intel" ];
   };
+
+  environment.systemPackages = [ pkgs.efibootmgr ];
 
   fileSystems = {
     "/" = {
