@@ -1,4 +1,9 @@
-{ pkgs, ... }: {
+{ config, lib, pkgs, ... }: let
+  palette = (
+    lib.importJSON "${config.catppuccin.sources.palette}/palette.json"
+  ).${config.catppuccin.flavor}.colors;
+
+in {
   imports = [
     ./bspwm.nix
   ];
@@ -9,7 +14,7 @@
   
   xsession = {
     enable = true;
-    initExtra = "hsetroot -solid '#181825'";
+    initExtra = "hsetroot -solid '${palette.mantle.hex}'";
     scriptPath = ".xinitrc";
   };
 }
