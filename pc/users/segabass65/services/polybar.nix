@@ -2,27 +2,27 @@
   services.polybar = {
     enable = true;
     script = ''
-      polybar bspwm-DP-2 &
-      polybar bspwm-DP-0 &
+      polybar DP-2 &
+      polybar DP-0 &
     '';
     
     settings = {
-      "bar/bspwm-DP-2" = {
-        "inherit" = "bar/bspwm";
+      "bar/DP-2" = {
+        "inherit" = "bar/bar";
 
         monitor = "DP-2";
-        modules-center = "bspwm-tray";
+        modules-center = "tray";
       };
 
-      "bar/bspwm-DP-0" = {
-        "inherit" = "bar/bspwm";
+      "bar/DP-0" = {
+        "inherit" = "bar/bar";
 
         monitor = "DP-0";
       };
 
-      "bar/bspwm" = {
-        modules-left = "nixos bspwm-workspaces";
-        modules-right = "bspwm-flags bspwm-keyboard bspwm-date";
+      "bar/bar" = {
+        modules-left = "nixos workspaces";
+        modules-right = "flags keyboard date";
 
         background = "\${colors.crust}";
         border-color = "\${colors.surface1}";
@@ -52,7 +52,7 @@
         label-background = "\${colors.mantle}";
       };
 
-      "module/bspwm-workspaces" = {
+      "module/workspaces" = {
         type = "internal/xworkspaces";
 
         pin-workspaces = true;
@@ -67,14 +67,14 @@
         label-empty = "";
       };
 
-      "module/bspwm-tray" = {
+      "module/tray" = {
         type = "internal/tray";
 
         tray-size = "100%";
         tray-spacing = "20px";
       };
 
-      "module/bspwm-flags" = {
+      "module/flags" = {
         type = "internal/bspwm";
 
         format = "<label-mode>";
@@ -100,7 +100,7 @@
         label-marked-foreground = "\${colors.crust}";
       };
 
-      "module/bspwm-keyboard" = {
+      "module/keyboard" = {
         type = "internal/xkeyboard";
 
         blacklist-0 = "num lock";
@@ -116,7 +116,7 @@
         label-indicator-on-capslock-foreground = "\${colors.crust}";
       };
 
-      "module/bspwm-date" = {
+      "module/date" = {
         type = "internal/date";
 
         time = "%H:%M";
