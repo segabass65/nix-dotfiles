@@ -7,6 +7,7 @@
       cmatrix
       efibootmgr
       git-filter-repo
+      hsetroot
       htop
       maim
       nerd-fonts.jetbrains-mono

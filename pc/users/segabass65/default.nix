@@ -1,4 +1,4 @@
-{ inputs, osConfig, ... }: {
+{ config, inputs, lib, osConfig, ... }: {
   imports = [
     ./home.nix
     ./programs
@@ -6,6 +6,10 @@
     ./xsession
     inputs.catppuccin.homeModules.catppuccin
   ];
+
+  _module.args.palette = (
+    lib.importJSON "${config.catppuccin.sources.palette}/palette.json"
+  ).${config.catppuccin.flavor}.colors;
 
   catppuccin = {
     enable = osConfig.catppuccin.enable;

@@ -1,4 +1,4 @@
-{ ... }: {
+{ palette, ... }: {
   xsession.windowManager.bspwm = {
     enable = true;
     
@@ -20,9 +20,9 @@
       right_padding = 5;
       top_padding = 5;
 
-      active_border_color = "#45475a";
-      focused_border_color = "#cba6f7";
-      normal_border_color = "#45475a";
+      active_border_color = palette.surface1.hex;
+      focused_border_color = palette.mauve.hex;
+      normal_border_color = palette.surface1.hex;
     };
 
     startupPrograms = [
