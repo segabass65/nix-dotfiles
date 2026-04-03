@@ -9,7 +9,7 @@
     };
     home-manager-unstable = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     
     catppuccin = {
@@ -18,7 +18,7 @@
     };
     catppuccin-unstable = {
       url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
