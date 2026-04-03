@@ -14,7 +14,7 @@
       settings = {
         user = {
           name = config.home.username;
-          email = "andreypiskunov2008@gmail.com";
+          email = "segabass65@proton.me";
         };
       };
     };
