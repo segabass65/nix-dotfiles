@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: let
+{ pkgs, ... }: let
   username = "segabass65";
 
 in {
