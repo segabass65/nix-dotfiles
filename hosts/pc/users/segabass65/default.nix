@@ -12,8 +12,9 @@
   ).${config.catppuccin.flavor}.colors;
 
   catppuccin = {
-    enable = osConfig.catppuccin.enable;
+    enable = true;
     accent = osConfig.catppuccin.accent;
+    cursors.enable = true;
     flavor = osConfig.catppuccin.flavor;
   };
 }

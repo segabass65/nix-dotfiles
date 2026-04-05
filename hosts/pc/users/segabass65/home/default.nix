@@ -12,6 +12,7 @@
       options = [ "grp:win_space_toggle" ];
     };
 
+    pointerCursor.x11.enable = true;
     stateVersion = osConfig.system.stateVersion;
   };
 }
