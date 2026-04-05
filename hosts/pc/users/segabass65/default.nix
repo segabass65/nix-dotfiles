@@ -1,5 +1,6 @@
 { config, inputs, lib, osConfig, ... }: {
   imports = [
+    ./config-generator.nix
     ./home
     ./programs
     ./services

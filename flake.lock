@@ -41,6 +41,23 @@
         "type": "github"
       }
     },
+    "config-generator": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1775394704,
+        "narHash": "sha256-aMEnBBbJWJQR8JKCU287zCpXfb9fXfafJVo/le+CvfE=",
+        "path": "/repos/segabass65/nix-config-generator",
+        "type": "path"
+      },
+      "original": {
+        "path": "/repos/segabass65/nix-config-generator",
+        "type": "path"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -118,6 +135,7 @@
       "inputs": {
         "catppuccin": "catppuccin",
         "catppuccin-unstable": "catppuccin-unstable",
+        "config-generator": "config-generator",
         "home-manager": "home-manager",
         "home-manager-unstable": "home-manager-unstable",
         "nixpkgs": "nixpkgs",

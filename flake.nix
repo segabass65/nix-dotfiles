@@ -20,6 +20,11 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+
+    config-generator = {
+      url = "path:/repos/segabass65/nix-config-generator";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = {
