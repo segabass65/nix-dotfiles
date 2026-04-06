@@ -1,4 +1,4 @@
-{ inputs, modulesPath, ... }: {
+{ inputs, modulesPath, pkgs, ... }: {
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./boot.nix
@@ -9,6 +9,7 @@
   ];
 
   catppuccin.enable = true;
+  environment.systemPackages = with pkgs; [ kitty.terminfo ];
   hardware.cpu.amd.updateMicrocode = true;
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   programs.zsh.enable = true;
