@@ -10,9 +10,9 @@
 
   catppuccin.enable = true;
   hardware.cpu.amd.updateMicrocode = true;
-  networking.networkmanager.enable = true;
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   programs.zsh.enable = true;
+  services.openssh.enable = true;
   system.stateVersion = "25.11";
   time.timeZone = "Europe/Moscow";
 }
