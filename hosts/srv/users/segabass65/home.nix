@@ -6,6 +6,7 @@
       cmatrix
       htop
       ouch
+      topydo
       tree
       tty-clock
       wget

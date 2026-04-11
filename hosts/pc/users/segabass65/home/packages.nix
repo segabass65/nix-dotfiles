@@ -11,6 +11,7 @@
     nerd-fonts.jetbrains-mono
     ouch
     protonup-rs
+    topydo
     tree
     tty-clock
     ventoy
