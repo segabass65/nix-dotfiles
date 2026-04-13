@@ -4,6 +4,7 @@
 
     packages = with pkgs; [
       cmatrix
+      efibootmgr
       htop
       ouch
       topydo
