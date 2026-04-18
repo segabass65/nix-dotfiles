@@ -13,6 +13,7 @@
 
   catppuccin.enable = true;
   environment.systemPackages = [ pkgs.home-manager ];
+  networking.firewall.trustedInterfaces = [ "virbr0" ];
   networking.nftables.enable = true;
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   system.stateVersion = "25.11";
