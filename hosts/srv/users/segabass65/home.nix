@@ -5,7 +5,6 @@
     packages = with pkgs; [
       cmatrix
       efibootmgr
-      gnumake
       htop
       ouch
       topydo
