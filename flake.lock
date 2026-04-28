@@ -115,6 +115,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-2205": {
+      "locked": {
+        "lastModified": 1685573264,
+        "narHash": "sha256-Zffu01pONhs/pqH07cjlF10NnMDLok8ix5Uk4rhOnZQ=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "380be19fbd2d9079f677978361792cb25e8a3635",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-22.05",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-unstable": {
       "locked": {
         "lastModified": 1775710090,
@@ -139,6 +155,7 @@
         "home-manager": "home-manager",
         "home-manager-unstable": "home-manager-unstable",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-2205": "nixpkgs-2205",
         "nixpkgs-unstable": "nixpkgs-unstable"
       }
     }

@@ -1,22 +1,23 @@
-{ pkgs, ... }: {
-  home.packages = with pkgs; [
-    cmatrix
-    corefonts
-    efibootmgr
-    git-filter-repo
-    hsetroot
-    htop
-    krita
-    libreoffice-fresh
-    maim
-    nerd-fonts.jetbrains-mono
-    ouch
-    protonup-rs
-    topydo
-    tree
-    tty-clock
-    ventoy
-    wget
-    xclip
+{ pkgs, pkgs2205, ... }: {
+  home.packages = [
+    pkgs.cmatrix
+    pkgs.corefonts
+    pkgs.efibootmgr
+    pkgs.git-filter-repo
+    pkgs.hsetroot
+    pkgs.htop
+    pkgs.krita
+    pkgs.libreoffice-fresh
+    pkgs.maim
+    pkgs.nerd-fonts.jetbrains-mono
+    pkgs.ouch
+    pkgs.protonup-rs
+    pkgs.topydo
+    pkgs.tree
+    pkgs.tty-clock
+    pkgs.ventoy
+    pkgs.wget
+    pkgs.xclip
+    pkgs2205.ciscoPacketTracer8
   ];
 }

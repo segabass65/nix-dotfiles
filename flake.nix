@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-2205.url = "github:nixos/nixpkgs/nixos-22.05";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -33,6 +34,7 @@
     self,
     nixpkgs,
     nixpkgs-unstable,
+    nixpkgs-2205,
     home-manager,
     home-manager-unstable,
     catppuccin,
@@ -102,6 +104,7 @@
         hostName = "pc";
 
         specialArgs = {
+          pkgs2205 = import nixpkgs-2205 pkgsSettings;
           pkgsUnstable = import nixpkgs-unstable pkgsSettings;
         };
       };
