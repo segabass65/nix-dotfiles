@@ -7,6 +7,7 @@
     hsetroot
     htop
     krita
+    libreoffice-fresh
     maim
     nerd-fonts.jetbrains-mono
     ouch

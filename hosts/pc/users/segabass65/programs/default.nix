@@ -13,7 +13,6 @@
     home-manager.enable = true;
     lutris.enable = true;
     neovim.enable = true;
-    onlyoffice.enable = true;
     rtorrent.enable = true;
     uv.enable = true;
     vesktop.enable = true;
