@@ -24,6 +24,11 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    coloraddo = {
+      url = "path:/repos/segabass65/coloraddo";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     config-generator = {
       url = "path:/repos/segabass65/nix-config-generator";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
