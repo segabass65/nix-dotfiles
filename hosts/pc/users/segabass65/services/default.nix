@@ -4,4 +4,6 @@
     ./polybar.nix
     ./sxhkd.nix
   ];
+
+  services.coloraddod.enable = true;
 }

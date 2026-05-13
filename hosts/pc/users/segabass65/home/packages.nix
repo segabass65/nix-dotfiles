@@ -1,6 +1,5 @@
 { inputs, pkgs, pkgs2205, ... }: {
   home.packages = [
-    inputs.coloraddo.packages.x86_64-linux.default
     pkgs.cmatrix
     pkgs.corefonts
     pkgs.efibootmgr

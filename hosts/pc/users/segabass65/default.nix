@@ -6,6 +6,7 @@
     ./services
     ./xsession
     inputs.catppuccin.homeModules.catppuccin
+    inputs.coloraddo.homeModules.coloraddo
   ];
 
   _module.args.palette = (
