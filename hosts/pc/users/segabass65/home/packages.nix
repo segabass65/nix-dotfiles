@@ -13,6 +13,7 @@
     pkgs.ouch
     pkgs.protonup-rs
     pkgs.topydo
+    pkgs.unrar
     pkgs.tree
     pkgs.tty-clock
     pkgs.ventoy
