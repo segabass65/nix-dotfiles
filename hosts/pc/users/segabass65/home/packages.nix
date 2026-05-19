@@ -11,7 +11,7 @@
     pkgs.maim
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.ouch
-    pkgs.protonup-rs
+    pkgs.protonup-qt
     pkgs.topydo
     pkgs.unrar
     pkgs.tree
