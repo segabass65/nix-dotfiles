@@ -12,10 +12,11 @@
     pkgs.nerd-fonts.jetbrains-mono
     pkgs.ouch
     pkgs.protonup-qt
+    pkgs.qbittorrent
     pkgs.topydo
-    pkgs.unrar
     pkgs.tree
     pkgs.tty-clock
+    pkgs.unrar
     pkgs.ventoy
     pkgs.wget
     pkgs.xclip
