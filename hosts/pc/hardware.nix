@@ -6,7 +6,10 @@
       enable = true;
       enable32Bit = true;
     };
-    
-    nvidia.open = true;
+
+    nvidia = {
+      open = true;
+      powerManagement.enable = true;
+    };
   };
 }
