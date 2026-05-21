@@ -38,7 +38,7 @@
 
           sections.lualine_c = [
             {
-              __unkeyed-1 = "file_path";
+              __unkeyed-1 = "filename";
               path = 1; 
             }
           ];
