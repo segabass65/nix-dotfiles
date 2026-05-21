@@ -24,6 +24,16 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    
+    nixvim-unstable = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     coloraddo = {
       url = "path:/repos/segabass65/coloraddo";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
@@ -42,8 +52,6 @@
     nixpkgs-2205,
     home-manager,
     home-manager-unstable,
-    catppuccin,
-    catppuccin-unstable,
     ...
   } @ inputs: {
 

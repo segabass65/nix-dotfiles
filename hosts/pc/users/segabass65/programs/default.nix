@@ -4,7 +4,7 @@
     ./git.nix
     ./kitty.nix
     ./librewolf
-    ./vscode.nix
+    ./nixvim.nix
     ./zsh.nix
   ];
 
@@ -13,7 +13,6 @@
     cmus.enable = true;
     home-manager.enable = true;
     lutris.enable = true;
-    neovim.enable = true;
     uv.enable = true;
     vesktop.enable = true;
     vifm.enable = true;

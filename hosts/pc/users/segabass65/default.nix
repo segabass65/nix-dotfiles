@@ -7,6 +7,7 @@
     ./xsession
     inputs.catppuccin.homeModules.catppuccin
     inputs.coloraddo.homeModules.coloraddo
+    inputs.nixvim.homeModules.nixvim
   ];
 
   _module.args.palette = (
