@@ -12,10 +12,10 @@
     cava.enable = true;
     cmus.enable = true;
     home-manager.enable = true;
+    lf.enable = true;
     lutris.enable = true;
     uv.enable = true;
     vesktop.enable = true;
-    vifm.enable = true;
     yt-dlp.enable = true;
   };
 }
