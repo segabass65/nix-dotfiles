@@ -18,7 +18,10 @@
     qutebrowser = {
       enable = true;
       settings = {
-        colors.webpage.preferred_color_scheme = "dark";
+        colors.webpage = {
+          darkmode.enabled = true;
+          preferred_color_scheme = "dark";
+        };
         content.blocking.method = "both";
       };
     };
