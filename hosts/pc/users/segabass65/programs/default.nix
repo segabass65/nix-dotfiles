@@ -12,6 +12,7 @@
     cava.enable = true;
     cmus.enable = true;
     home-manager.enable = true;
+    lazygit.enable = true;
     lf.enable = true;
     lutris.enable = true;
     uv.enable = true;
