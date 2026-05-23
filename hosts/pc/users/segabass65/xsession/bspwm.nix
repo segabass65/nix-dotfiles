@@ -7,6 +7,12 @@
       DP-0 = [ "6" "7" "8" "9" "10" ];
     };
 
+    rules."scratchpad" = {
+      locked = true;
+      state = "floating";
+      sticky = true;
+    };
+
     settings = {
       pointer_follows_monitor = true;
       focus_follows_pointer = true;

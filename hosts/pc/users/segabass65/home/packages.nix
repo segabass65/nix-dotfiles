@@ -13,6 +13,7 @@
     pkgs.ouch
     pkgs.protonup-qt
     pkgs.qbittorrent
+    pkgs.tdrop
     pkgs.topydo
     pkgs.tree
     pkgs.tty-clock

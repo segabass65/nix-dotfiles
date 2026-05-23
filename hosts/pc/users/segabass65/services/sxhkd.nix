@@ -3,7 +3,7 @@
     enable = true;
     keybindings = {
       "super + Return" =
-        "kitty";
+        "tdrop -m -w 80% -h 60% -x 10% -y 5% kitty --class scratchpad";
 
       "super + {q,r}" =
         "bspc {quit,wm -r}";
