@@ -61,6 +61,12 @@
 
       "super + {Left,Down,Up,Right}" =
         "bspc node -v {-20 0,0 20,0 -20,20 0}";
+
+      "Print" = ''
+        mkdir -p ~/Pictures/Screenshot && maim -u -s | \
+          tee ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%M-%S).png | \
+          xclip -selection clipboard -t image/png
+      '';
     };
   };
 }
