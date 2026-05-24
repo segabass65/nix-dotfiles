@@ -21,6 +21,7 @@
      };
 
     plugins = {
+      comment.enable = true;
       gitsigns.enable = true;
 
       indent-blankline = {
