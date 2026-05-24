@@ -14,6 +14,7 @@
     pkgs.protonup-qt
     pkgs.qbittorrent
     pkgs.tdrop
+    pkgs.termdown
     pkgs.topydo
     pkgs.tree
     pkgs.tty-clock
