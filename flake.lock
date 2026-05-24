@@ -43,6 +43,7 @@
     },
     "coloraddo": {
       "inputs": {
+        "config-generator": "config-generator",
         "nixpkgs": [
           "nixpkgs-unstable"
         ],
@@ -50,8 +51,8 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1779262854,
-        "narHash": "sha256-ymSyraPXqDLGt+NWrTUF0Zda9IpG4g+TRHEQkFlznKE=",
+        "lastModified": 1779665905,
+        "narHash": "sha256-909qzEuu/yVs3n+2kmmA28x0cWLpYBdsu0npZjrFO1A=",
         "path": "/repos/segabass65/coloraddo",
         "type": "path"
       },
@@ -63,12 +64,30 @@
     "config-generator": {
       "inputs": {
         "nixpkgs": [
+          "coloraddo",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779665698,
+        "narHash": "sha256-o7eWZlwO9k7oBHKxmtvnZchjxp/FiQ9WkgGJO9vZTfQ=",
+        "path": "/repos/segabass65/nix-config-generator",
+        "type": "path"
+      },
+      "original": {
+        "path": "/repos/segabass65/nix-config-generator",
+        "type": "path"
+      }
+    },
+    "config-generator_2": {
+      "inputs": {
+        "nixpkgs": [
           "nixpkgs-unstable"
         ]
       },
       "locked": {
-        "lastModified": 1775908483,
-        "narHash": "sha256-bB2HE13fWJAhz7Fr/tkNz0XTcggcaJQ1JDV+prwHUbI=",
+        "lastModified": 1779665717,
+        "narHash": "sha256-o7eWZlwO9k7oBHKxmtvnZchjxp/FiQ9WkgGJO9vZTfQ=",
         "path": "/repos/segabass65/nix-config-generator",
         "type": "path"
       },
@@ -328,7 +347,7 @@
         "catppuccin": "catppuccin",
         "catppuccin-unstable": "catppuccin-unstable",
         "coloraddo": "coloraddo",
-        "config-generator": "config-generator",
+        "config-generator": "config-generator_2",
         "home-manager": "home-manager",
         "home-manager-unstable": "home-manager-unstable",
         "nixpkgs": "nixpkgs",
