@@ -6,6 +6,7 @@
     pkgs.git-filter-repo
     pkgs.hsetroot
     pkgs.htop
+    pkgs.klavaro
     pkgs.krita
     pkgs.libreoffice-fresh
     pkgs.maim
