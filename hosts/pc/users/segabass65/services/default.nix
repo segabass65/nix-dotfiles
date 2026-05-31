@@ -5,4 +5,6 @@
     ./polybar.nix
     ./sxhkd.nix
   ];
+
+  services.betterlockscreen.enable = true;
 }
