@@ -1,12 +1,12 @@
 { config, inputs, lib, osConfig, ... }: {
   imports = [
-    ./config-generator.nix
     ./home
     ./programs
     ./services
     ./xsession
     inputs.catppuccin.homeModules.catppuccin
     inputs.coloraddo.homeModules.coloraddo
+    inputs.config-generator.homeModules.test
     inputs.nixvim.homeModules.nixvim
   ];
 

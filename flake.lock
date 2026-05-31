@@ -51,8 +51,8 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1780219110,
-        "narHash": "sha256-zpft0knnhsBWeJ3PWBU52qB4KlT4KPIGLf26fCNBuYg=",
+        "lastModified": 1780248215,
+        "narHash": "sha256-MVzI8YD0WLQ08WjdmsPLIhl9ADgcMjuoD0hnjPWdMPA=",
         "path": "/repos/segabass65/coloraddo",
         "type": "path"
       },
@@ -69,8 +69,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1780216301,
-        "narHash": "sha256-kfvz4/70n3CxGFUPBVbQ6gsgsdzG3IVObuFMVlGgeSI=",
+        "lastModified": 1780248212,
+        "narHash": "sha256-XlTt58uKdaqmKcEUUJdBg90raENdgwldIjyReuc1Oc8=",
         "path": "/repos/segabass65/nix-config-generator",
         "type": "path"
       },
@@ -86,8 +86,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1780216301,
-        "narHash": "sha256-kfvz4/70n3CxGFUPBVbQ6gsgsdzG3IVObuFMVlGgeSI=",
+        "lastModified": 1780248212,
+        "narHash": "sha256-XlTt58uKdaqmKcEUUJdBg90raENdgwldIjyReuc1Oc8=",
         "path": "/repos/segabass65/nix-config-generator",
         "type": "path"
       },
