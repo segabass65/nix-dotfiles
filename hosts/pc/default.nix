@@ -16,7 +16,7 @@
   networking.firewall.trustedInterfaces = [ "virbr0" ];
   networking.nftables.enable = true;
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
   time.timeZone = "Europe/Moscow";
 
   security = {
