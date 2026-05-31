@@ -40,7 +40,7 @@
     };
 
     config-generator = {
-      url = "path:/repos/segabass65/nix-config-generator";
+      url = "path:/repos/segabass65/config-generator";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };

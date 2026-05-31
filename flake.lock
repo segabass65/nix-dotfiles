@@ -51,8 +51,8 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1780248215,
-        "narHash": "sha256-MVzI8YD0WLQ08WjdmsPLIhl9ADgcMjuoD0hnjPWdMPA=",
+        "lastModified": 1780266296,
+        "narHash": "sha256-wsDpEf4UH9Wo/NONQEshoyYJhTEkBcmM3IgTMf5CmAI=",
         "path": "/repos/segabass65/coloraddo",
         "type": "path"
       },
@@ -69,13 +69,13 @@
         ]
       },
       "locked": {
-        "lastModified": 1780248212,
-        "narHash": "sha256-XlTt58uKdaqmKcEUUJdBg90raENdgwldIjyReuc1Oc8=",
-        "path": "/repos/segabass65/nix-config-generator",
+        "lastModified": 1780265725,
+        "narHash": "sha256-PUQuPXucx9vFb+P3p+jnmxUKPsV6BLBQYM4oS0YqVCQ=",
+        "path": "/repos/segabass65/config-generator",
         "type": "path"
       },
       "original": {
-        "path": "/repos/segabass65/nix-config-generator",
+        "path": "/repos/segabass65/config-generator",
         "type": "path"
       }
     },
@@ -86,13 +86,13 @@
         ]
       },
       "locked": {
-        "lastModified": 1780248212,
-        "narHash": "sha256-XlTt58uKdaqmKcEUUJdBg90raENdgwldIjyReuc1Oc8=",
-        "path": "/repos/segabass65/nix-config-generator",
+        "lastModified": 1780265725,
+        "narHash": "sha256-PUQuPXucx9vFb+P3p+jnmxUKPsV6BLBQYM4oS0YqVCQ=",
+        "path": "/repos/segabass65/config-generator",
         "type": "path"
       },
       "original": {
-        "path": "/repos/segabass65/nix-config-generator",
+        "path": "/repos/segabass65/config-generator",
         "type": "path"
       }
     },
