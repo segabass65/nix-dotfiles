@@ -46,6 +46,7 @@
         };
       };
 
+      markdown-preview.enable = true;
       nvim-autopairs.enable = true;
       sleuth.enable = true;
 
