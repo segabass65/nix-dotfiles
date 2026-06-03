@@ -30,7 +30,6 @@
       };
     };
 
-    uv.enable = true;
     vesktop.enable = true;
     yt-dlp.enable = true;
   };
