@@ -11,6 +11,7 @@
   programs = {
     cava.enable = true;
     cmus.enable = true;
+    gh.enable = true;
     home-manager.enable = true;
     lazygit.enable = true;
     lf.enable = true;
