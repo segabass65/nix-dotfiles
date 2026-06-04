@@ -21,12 +21,40 @@
      };
 
     plugins = {
+      cmp = {
+        enable = true;
+        settings = {
+          experimental.ghost_text = true;
+          mapping.__raw = "cmp.mapping.preset.insert()";
+          sources = [
+            { name = "nvim_lsp"; }
+            { name = "buffer"; }
+            { name = "path"; }
+            { name = "luasnip"; }
+          ];
+        };
+      };
+
       comment.enable = true;
       gitsigns.enable = true;
 
       indent-blankline = {
         enable = true;
         settings.scope.enabled = false;
+      };
+
+      lsp = {
+        enable = true;
+        keymaps.lspBuf = {
+          "gd" = "definition";
+          "gD" = "declaration";
+          "gi" = "implementation";
+          "gt" = "type_definition";
+          "gr" = "references";
+          "K"  = "hover";
+        };
+
+        servers.pyright.enable = true;
       };
 
       lualine = {
