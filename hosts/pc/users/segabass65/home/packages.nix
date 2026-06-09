@@ -1,5 +1,6 @@
 { inputs, pkgs, pkgs2205, ... }: {
   home.packages = [
+    inputs.freesmlauncher.packages.${pkgs.system}.default
     pkgs.cmatrix
     pkgs.corefonts
     pkgs.efibootmgr

@@ -34,6 +34,11 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
+    freesmlauncher = {
+      url = "github:freesmteam/freesmlauncher";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     coloraddo = {
       url = "path:/repos/segabass65/coloraddo";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
