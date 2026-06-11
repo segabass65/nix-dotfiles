@@ -5,7 +5,7 @@
     ./file-systems.nix
     ./hardware.nix
     ./programs.nix
-    ./services.nix
+    ./services
     ./users
     inputs.catppuccin.nixosModules.catppuccin
     inputs.home-manager.nixosModules.home-manager
