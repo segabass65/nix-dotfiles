@@ -1,6 +1,7 @@
 { inputs, pkgs, pkgs2205, ... }: {
   home.packages = [
     inputs.freesmlauncher.packages.${pkgs.system}.default
+    pkgs.aseprite
     pkgs.cmatrix
     pkgs.corefonts
     pkgs.efibootmgr
@@ -8,7 +9,6 @@
     pkgs.hsetroot
     pkgs.htop
     pkgs.klavaro
-    pkgs.krita
     pkgs.libreoffice-fresh
     pkgs.maim
     pkgs.nerd-fonts.jetbrains-mono
