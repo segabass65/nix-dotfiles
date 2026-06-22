@@ -117,21 +117,5 @@
         hostName = "srv";
       };
     };
-
-    homeConfigurations = {
-      "segabass65@pc" = self.lib.homeManagerConfiguration {
-        inherit home-manager;
-
-        os = self.nixosConfigurations.pc;
-        username = "segabass65";
-      };
-
-      "segabass65@srv" = self.lib.homeManagerConfiguration {
-        inherit home-manager;
-
-        os = self.nixosConfigurations.srv;
-        username = "segabass65";
-      };
-    };
   };
 }
