@@ -9,7 +9,6 @@
   catppuccin = {
     enable = true;
     accent = osConfig.catppuccin.accent;
-    cursors.enable = true;
     flavor = osConfig.catppuccin.flavor;
   };
 }
