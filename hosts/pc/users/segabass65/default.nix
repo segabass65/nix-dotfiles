@@ -1,15 +1,10 @@
-{ config, inputs, lib, osConfig, ... }: {
-  imports = [
+{ inputs, osConfig, ... }: {
+  imports = with inputs; [
     ./home.nix
     ./programs
-    inputs.catppuccin.homeModules.catppuccin
-    inputs.config-generator.homeModules.test
-    inputs.nixvim.homeModules.nixvim
+    catppuccin.homeModules.catppuccin
+    nixvim.homeModules.nixvim
   ];
-
-  _module.args.palette = (
-    lib.importJSON "${config.catppuccin.sources.palette}/palette.json"
-  ).${config.catppuccin.flavor}.colors;
 
   catppuccin = {
     enable = true;
