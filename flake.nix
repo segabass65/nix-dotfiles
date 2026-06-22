@@ -59,28 +59,6 @@
           inherit inputs;
         } // (specialArgs);
       };
-
-      homeManagerConfiguration = {
-        home-manager,
-        os,
-        username
-      }: home-manager.lib.homeManagerConfiguration {
-        pkgs = os.pkgs;
-
-        extraSpecialArgs = {
-          osConfig = os.config;
-        } // (os.config.home-manager.extraSpecialArgs);
-
-        modules = [
-          {
-            imports = [
-              ./hosts/${os.config.networking.hostName}/users/${username}
-            ];
-
-            home = { inherit username; };
-          }
-        ];
-      };
     };
 
     nixosConfigurations = {
