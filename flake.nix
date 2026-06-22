@@ -63,7 +63,7 @@
             freesmlauncher =
               freesmlauncher.packages.${nixpkgsAttrs.system}.default;
           };
-        } // (specialArgs);
+        } // specialArgs;
       };
     };
 
