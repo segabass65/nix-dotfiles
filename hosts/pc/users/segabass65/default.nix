@@ -1,6 +1,6 @@
 { config, inputs, lib, osConfig, ... }: {
   imports = [
-    ./home
+    ./home.nix
     ./programs
     inputs.catppuccin.homeModules.catppuccin
     inputs.config-generator.homeModules.test
