@@ -1,62 +1,41 @@
 {
   description = "NixOS & Home Manager dotfiles";
-  
+
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-2205.url = "github:nixos/nixpkgs/nixos-22.05";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager-unstable = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-    
+
     catppuccin = {
       url = "github:catppuccin/nix/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    catppuccin-unstable = {
-      url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     nixvim = {
       url = "github:nix-community/nixvim/nixos-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
-    nixvim-unstable = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
 
     freesmlauncher = {
       url = "github:freesmteam/freesmlauncher";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
-
-    coloraddo = {
-      url = "path:/repos/segabass65/coloraddo";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     config-generator = {
       url = "path:/repos/segabass65/config-generator";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-unstable,
     nixpkgs-2205,
     home-manager,
-    home-manager-unstable,
     ...
   } @ inputs: {
 
@@ -123,7 +102,6 @@
 
         specialArgs = {
           pkgs2205 = import nixpkgs-2205 pkgsSettings;
-          pkgsUnstable = import nixpkgs-unstable pkgsSettings;
         };
       };
 
@@ -137,10 +115,6 @@
         inherit nixpkgs pkgsSettings;
         
         hostName = "srv";
-
-        specialArgs = {
-          pkgsUnstable = import nixpkgs-unstable pkgsSettings;
-        };
       };
     };
 
