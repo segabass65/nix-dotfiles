@@ -1,6 +1,6 @@
-{ inputs, pkgs, pkgs2205, ... }: {
+{ inputPkgs, pkgs, pkgs2205, ... }: {
   home.packages = [
-    inputs.freesmlauncher.packages.${pkgs.system}.default
+    inputPkgs.freesmlauncher
     pkgs.aseprite
     pkgs.cmatrix
     pkgs.corefonts

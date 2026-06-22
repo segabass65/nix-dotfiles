@@ -36,6 +36,7 @@
     nixpkgs,
     nixpkgs-2205,
     home-manager,
+    freesmlauncher,
     ...
   } @ inputs: {
 
@@ -57,11 +58,16 @@
 
         specialArgs = {
           inherit inputs;
+
+          inputPkgs = {
+            freesmlauncher =
+              freesmlauncher.packages.${nixpkgsAttrs.system}.default;
+          };
         } // (specialArgs);
       };
     };
 
-    nixosConfigurations = {
+    nixosConfigurations = with self.lib; {
       pc = let
         nixpkgsAttrs = {
           system = "x86_64-linux";
@@ -73,7 +79,7 @@
           };
         };
 
-      in self.lib.nixosSystem {
+      in nixosSystem {
         inherit nixpkgs nixpkgsAttrs;
         
         hostName = "pc";
@@ -89,7 +95,7 @@
           config.allowUnfree = true;
         };
 
-      in self.lib.nixosSystem {
+      in nixosSystem {
         inherit nixpkgs nixpkgsAttrs;
 
         hostName = "srv";

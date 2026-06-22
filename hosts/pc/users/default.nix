@@ -1,12 +1,12 @@
-{ inputs, pkgsUnstable, pkgs2205, ... }: {
+{ inputPkgs, inputs, pkgs2205, ... }: {
   imports = [
     ./segabass65.nix
   ];
 
   home-manager = {
     extraSpecialArgs = {
-      inherit inputs;
-      inherit pkgs2205 pkgsUnstable;
+      inherit inputs inputPkgs;
+      inherit pkgs2205;
     };
     
     useGlobalPkgs = true;
