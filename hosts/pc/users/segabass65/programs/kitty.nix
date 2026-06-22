@@ -1,10 +1,12 @@
 { pkgs, ... }: {
   programs.kitty = {
     enable = true;
+
     font = {
       name = "JetBrainsMono Nerd Font";
       package = pkgs.nerd-fonts.jetbrains-mono;
     };
+
     settings = {
       enable_audio_bell = false;
       

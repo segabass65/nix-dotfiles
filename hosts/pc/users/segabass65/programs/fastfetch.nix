@@ -1,10 +1,12 @@
 { ... }: {
   programs.fastfetch = {
     enable = true;
+
     settings = {
       display = {
         separator = " -> ";
       };
+
       modules = [
         {
           type = "custom";
