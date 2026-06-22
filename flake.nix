@@ -43,7 +43,7 @@
       nixosSystem = {
         nixpkgs,
         hostName,
-        pkgsSettings,
+        nixpkgsAttrs,
         specialArgs,
         ...
       }: nixpkgs.lib.nixosSystem {
@@ -51,7 +51,7 @@
           {
             imports = [ ./hosts/${hostName} ];
             networking = { inherit hostName; };
-            nixpkgs = pkgsSettings;
+            nixpkgs = nixpkgsAttrs;
           }
         ];
 
@@ -63,7 +63,7 @@
 
     nixosConfigurations = {
       pc = let
-        pkgsSettings = {
+        nixpkgsAttrs = {
           system = "x86_64-linux";
           config = {
             allowUnfree = true;
@@ -74,24 +74,24 @@
         };
 
       in self.lib.nixosSystem {
-        inherit nixpkgs pkgsSettings;
+        inherit nixpkgs nixpkgsAttrs;
         
         hostName = "pc";
 
         specialArgs = {
-          pkgs2205 = import nixpkgs-2205 pkgsSettings;
+          pkgs2205 = import nixpkgs-2205 nixpkgsAttrs;
         };
       };
 
       srv = let
-        pkgsSettings = {
+        nixpkgsAttrs = {
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
 
       in self.lib.nixosSystem {
-        inherit nixpkgs pkgsSettings;
-        
+        inherit nixpkgs nixpkgsAttrs;
+
         hostName = "srv";
       };
     };
