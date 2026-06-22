@@ -1,5 +1,5 @@
 { inputs, modulesPath, pkgs, ... }: {
-  imports = [
+  imports = with inputs; [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./boot.nix
     ./file-systems.nix
@@ -7,22 +7,21 @@
     ./programs.nix
     ./services
     ./users
-    inputs.catppuccin.nixosModules.catppuccin
-    inputs.home-manager.nixosModules.home-manager
+    catppuccin.nixosModules.catppuccin
+    home-manager.nixosModules.home-manager
   ];
 
   catppuccin.enable = true;
-  environment.systemPackages = [ pkgs.home-manager ];
-  networking.firewall.trustedInterfaces = [ "virbr0" ];
-  networking.nftables.enable = true;
+
+  networking = {
+    firewall.trustedInterfaces = [ "virbr0" ];
+    nftables.enable = true;
+  };
+
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
+  security.rtkit.enable = true;
   system.stateVersion = "26.05";
   time.timeZone = "Europe/Moscow";
-
-  security = {
-    pam.services.i3lock.enable = true;
-    rtkit.enable = true;
-  };
 
   virtualisation.libvirtd = {
     enable = true;
