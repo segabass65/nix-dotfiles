@@ -24,11 +24,6 @@
       url = "github:freesmteam/freesmlauncher";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    config-generator = {
-      url = "path:/repos/segabass65/config-generator";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
