@@ -5,25 +5,11 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-2205.url = "github:nixos/nixpkgs/nixos-22.05";
 
-    home-manager = {
-      url = "github:nix-community/home-manager/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    catppuccin = {
-      url = "github:catppuccin/nix/release-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixvim = {
-      url = "github:nix-community/nixvim/nixos-26.05";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    freesmlauncher = {
-      url = "github:freesmteam/freesmlauncher";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    home-manager.url = "github:nix-community/home-manager/release-26.05";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
+    catppuccin.url = "github:catppuccin/nix/release-26.05";
+    nixvim.url = "github:nix-community/nixvim/nixos-26.05";
+    freesmlauncher.url = "github:freesmteam/freesmlauncher";
   };
 
   outputs = {

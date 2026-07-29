@@ -9,6 +9,7 @@
     ./users
     catppuccin.nixosModules.catppuccin
     home-manager.nixosModules.home-manager
+    nix-flatpak.nixosModules.nix-flatpak
   ];
 
   catppuccin.enable = true;
