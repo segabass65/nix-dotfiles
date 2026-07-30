@@ -9,12 +9,7 @@ in {
   };
 
   users.users.${username} = {
-    extraGroups = [
-      "kvm"
-      "libvirtd"
-      "wheel"
-    ];
-
+    extraGroups = [ "wheel" ];
     isNormalUser = true;
     shell = pkgs.zsh;
   };

@@ -1,4 +1,4 @@
-{ inputPkgs, inputs, pkgs2205, ... }: {
+{ inputPkgs, inputs, pkgs, pkgs2205, ... }: {
   imports = [
     ./segabass65.nix
   ];
@@ -12,4 +12,6 @@
     useGlobalPkgs = true;
     useUserPackages = true;
   };
+
+  users.users.root.shell = pkgs.zsh;
 }

@@ -7,9 +7,7 @@
 
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
-    catppuccin.url = "github:catppuccin/nix/release-26.05";
     nixvim.url = "github:nix-community/nixvim/nixos-26.05";
-    freesmlauncher.url = "github:freesmteam/freesmlauncher";
   };
 
   outputs = {
@@ -17,7 +15,6 @@
     nixpkgs,
     nixpkgs-2205,
     home-manager,
-    freesmlauncher,
     ...
   } @ inputs: {
 
@@ -40,10 +37,7 @@
         specialArgs = {
           inherit inputs;
 
-          inputPkgs = {
-            freesmlauncher =
-              freesmlauncher.packages.${nixpkgsAttrs.system}.default;
-          };
+          inputPkgs = { };
         } // specialArgs;
       };
     };

@@ -2,11 +2,7 @@
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-
-    colorschemes.catppuccin = {
-      enable = true;
-      settings.flavour = config.catppuccin.flavor;
-    };
+    colorschemes.catppuccin.enable = true;
 
     opts = {
       cursorline = true;
