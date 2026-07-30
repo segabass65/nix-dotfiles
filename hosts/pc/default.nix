@@ -2,6 +2,7 @@
   imports = with inputs; [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./boot.nix
+    ./console.nix
     ./file-systems.nix
     ./hardware.nix
     ./programs.nix
