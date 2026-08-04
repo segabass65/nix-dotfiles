@@ -1,13 +1,7 @@
-{ inputs, osConfig, ... }: {
-  imports = [
+{ inputs, ... }: {
+  imports = with inputs; [
     ./home.nix
     ./programs
-    inputs.catppuccin.homeModules.catppuccin
+    nixvim.homeModules.nixvim
   ];
-
-  catppuccin = {
-    enable = osConfig.catppuccin.enable;
-    accent = osConfig.catppuccin.accent;
-    flavor = osConfig.catppuccin.flavor;
-  }; 
 }
