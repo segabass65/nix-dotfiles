@@ -4,6 +4,7 @@
   ];
 
   programs = {
+    fastfetch.enable = true;
     git.enable = true;
     home-manager.enable = true;
     neovim.enable = true;
