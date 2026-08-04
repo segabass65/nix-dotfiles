@@ -1,16 +1,16 @@
-{ config, pkgs, osConfig, ... }: {
+{ config, osConfig, pkgs, ... }: {
   home = {
     homeDirectory = "/home/${config.home.username}";
 
     packages = with pkgs; [
       cmatrix
-      efibootmgr
+      git-filter-repo
       htop
       ouch
-      topydo
+      termdown
       tree
       tty-clock
-      wget
+      unrar
     ];
 
     stateVersion = osConfig.system.stateVersion;
