@@ -1,18 +1,1 @@
-{ ... }: {
-  programs.zsh = {
-    enable = true;
-
-    autosuggestion.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
-
-    oh-my-zsh = {
-      enable = true;
-
-      plugins = [
-        "sudo"
-      ];
-      theme = "robbyrussell";
-    };
-  };
-}
+/home/segabass65/Projects/nix-dotfiles/hosts/pc/home-manager/users/segabass65/programs/zsh.nix
