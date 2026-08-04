@@ -1,0 +1,1 @@
+/home/segabass65/Projects/nix-dotfiles/hosts/pc/home-manager/users/segabass65/programs/git.nix
