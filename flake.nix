@@ -27,8 +27,8 @@
       nixosSystem = {
         nixpkgs,
         hostName,
-        nixpkgsAttrs,
-        specialArgs
+        nixpkgsAttrs ? {},
+        specialArgs ? {}
       }: nixpkgs.lib.nixosSystem {
         modules = [
           {
@@ -50,7 +50,7 @@
       # and sets the home.username attribute.
 
       home = username: selfPath: {
-        imports = [ "${selfPath}/${username}" ];
+        imports = [ (selfPath + "/${username}") ];
 
         home = { inherit username; };
       };

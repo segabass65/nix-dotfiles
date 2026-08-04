@@ -1,1 +1,1 @@
-/home/segabass65/Projects/nix-dotfiles/hosts/pc/home-manager/users/segabass65/programs/zsh.nix
+../../../../../pc/home-manager/users/segabass65/programs/zsh.nix
