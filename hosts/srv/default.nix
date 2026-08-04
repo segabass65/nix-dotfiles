@@ -1,19 +1,16 @@
-{ inputs, modulesPath, pkgs, ... }: {
-  imports = [
+{ inputs, modulesPath, ... }: {
+  imports = with inputs; [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./boot.nix
     ./file-systems.nix
     ./users
-    inputs.catppuccin.nixosModules.catppuccin
-    inputs.home-manager.nixosModules.home-manager
+    home-manager.nixosModules.home-manager
   ];
 
-  catppuccin.enable = true;
-  environment.systemPackages = with pkgs; [ kitty.terminfo ];
   hardware.cpu.amd.updateMicrocode = true;
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   programs.zsh.enable = true;
   services.openssh.enable = true;
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
   time.timeZone = "Europe/Moscow";
 }
