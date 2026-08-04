@@ -28,8 +28,7 @@
         nixpkgs,
         hostName,
         nixpkgsAttrs,
-        specialArgs,
-        ...
+        specialArgs
       }: nixpkgs.lib.nixosSystem {
         modules = [
           {
@@ -44,6 +43,16 @@
 
           inputPkgs = { };
         } // specialArgs;
+      };
+
+      # Helper to simplify Home Manager user configuration setup.
+      # Automatically imports the user module from the caller's directory path
+      # and sets the home.username attribute.
+
+      home = username: selfPath: {
+        imports = [ "${selfPath}/${username}" ];
+
+        home = { inherit username; };
       };
     };
 

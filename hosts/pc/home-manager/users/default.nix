@@ -1,7 +1,3 @@
-{ ... }: {
-  home-manager.users.segabass65 = {
-    imports = [ ./segabass65 ];
-
-    home.username = "segabass65";
-  };
+{ inputs, ... }: with inputs.self.lib; {
+  home-manager.users.segabass65 = home "segabass65" ./.;
 }
