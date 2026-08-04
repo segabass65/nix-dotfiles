@@ -5,9 +5,10 @@
     ./console.nix
     ./file-systems.nix
     ./hardware.nix
+    ./home-manager
     ./programs.nix
     ./services
-    ./users
+    ./users.nix
     home-manager.nixosModules.home-manager
     nix-flatpak.nixosModules.nix-flatpak
   ];
