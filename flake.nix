@@ -1,5 +1,5 @@
 {
-  description = "NixOS dotfiles";
+  description = "👤 segabass65's multi-host ❄️ NixOS dotfiles";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
@@ -19,6 +19,11 @@
   } @ inputs: {
 
     lib = {
+
+      # Helper to simplify NixOS host configuration setup.
+      # Automatically imports `./hosts/${hostName}`, sets the hostname,
+      # configures nixpkgs, and passes flake inputs via specialArgs.
+
       nixosSystem = {
         nixpkgs,
         hostName,
