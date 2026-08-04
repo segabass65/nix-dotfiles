@@ -4,7 +4,8 @@
     ./boot.nix
     ./console.nix
     ./file-systems.nix
-    ./users
+    ./home-manager
+    ./users.nix
     home-manager.nixosModules.home-manager
   ];
 

@@ -1,6 +1,6 @@
 { inputPkgs, inputs, ... }: {
   imports = [
-    ./segabass65.nix
+    ./users
   ];
 
   home-manager = {
