@@ -1,74 +1,61 @@
-# ❄️ NixOS & Home Manager dotfiles
+<h1 align="center">
+  <img src="https://nixos.org/_astro/nixos-logomark-white-flat-none.C3ZekuS7_2pR7X7.svg" width="256" alt="Icon"/><br/><br/>
+  Multi-host NixOS dotfiles
+</h1>
 
-This configuration is primarily designed for my personal workflow, hardware, and preferences. It is not a general-purpose setup and should not be expected to work out of the box on other systems.
+This configuration is primarily designed for my personal workflow, hardware, and preferences. It is not a generic setup and should not be expected to work out of the box on other systems.
 
 You are welcome to reuse parts of it, but expect to adapt and modify it to fit your own environment.
 
-## ⚙️ Hosts
-
-The configuration defines two NixOS hosts:
-
-- **pc** — main desktop system with a full graphical environment and daily-use applications.
-
-- **srv** — minimal, server-oriented setup without a graphical environment, focused on services and background tasks.
-
-The difference between them is mainly the presence of a desktop stack and a few service-related adjustments.
-
-## 🏠 Users
-
-There is a single user: **segabass65**.
-
-User configuration is not global. Instead, it is defined per-host, meaning the same user can have different environments depending on whether they are running on **pc** or **srv**.
-
-This design keeps user configuration tightly coupled to the system it runs on, rather than abstracting it into a shared global layer.
-
 ## 🔍 Overview
 
-![screenshot](./assets/screenshot.png)
+> [!WARNING]
+> This screenshot only showcases the DE and the text editor. Any other applications or tools shown may not be included in the repository, as they were installed non-declaratively.
 
-<h3 align="center">segabass65@pc</h3>
+![screenshot](assets/screenshot.png)
 
 ---
 
-- 🚀 Shell: zsh  
-- 🧱 WM: bspwm  
-- 📊 Bar: polybar  
-- 📟 Terminal: kitty  
-- ...
+### ➜ ~ dotfetch
 
-## 📜 Architecture notes
+> [!TIP]
+> Starred items (⭐) highlight configuration differences between hosts.
 
-This flake is structured around two core abstractions:
+<table>
+  <tr>
+    <td>
+      <br>
+      <img src="https://nixos.org/_astro/nixos-logomark-white-flat-none.C3ZekuS7_2pR7X7.svg" width="160" alt="Icon"/>
+    </td>
+    <td>
 
-- `nixosSystem` — a helper for defining NixOS hosts with shared defaults.
+|                    | 👤 segabass65@pc | 👤 segabass65@srv |
+| -------------------| ---------------- | ----------------- |
+| 👣 **DE**          | ⭐ GNOME         | ⭐ None           |
+| 🚀 **Shell**       | Zsh              | Zsh               |
+| 🐧 **Kernel**      | ⭐ Zen           | ⭐ Linux          |
+| 📝 **Text Editor** | Neovim           | Neovim            |
 
-- `homeManagerConfiguration` — a helper for defining Home Manager environments.
+  </tr>
+</table>
 
-These helpers exist to reduce repetition and centralize common configuration logic across hosts and users.
+## 🌐 Hosts
 
-A key design decision is that Home Manager is instantiated from an existing NixOS system configuration.
+The configuration defines two hosts:
 
-This means every Home Manager environment receives system-level configuration context via `osConfig`.
+- 🖥️ **PC** – main desktop system with a full graphical environment and daily-use applications.
+- 🗄️ **SRV** – minimal, headless server setup focused on services and background tasks.
 
-This approach ensures consistent access to system configuration options inside Home Manager modules, even in standalone usage.
+> [!NOTE]
+> The difference between them is mainly the presence of the desktop stack and a few service-related adjustments.
 
-Without this design, `osConfig` would only be available when Home Manager is used as a NixOS module directly.
+## 🏠 Home Manager
 
-As a result, every Home Manager configuration in this flake is explicitly tied to a corresponding NixOS host.
+User configurations are managed as a NixOS module rather than a standalone Home Manager installation. Settings are defined on a per-host basis – allowing the same user account to have a completely different, tailored environment depending on whether it is running on the PC or the SRV.
+
+This design keeps user configurations tightly coupled to the system they run on, rather than abstracting them into a shared, generic global layer.
 
 ## ⬇️ Installation
-
-This configuration supports both NixOS and non-NixOS systems, as long as Nix with flakes support is enabled.
-
-### 📌 Requirements
-
-- Nix (with flakes enabled)
-- Git
-- Home Manager (required only on non-NixOS systems)
-
-### ❄️ NixOS
-
-On NixOS, systems are defined via `nixosConfigurations`.
 
 To apply a system configuration, use:
 
@@ -76,18 +63,4 @@ To apply a system configuration, use:
 sudo nixos-rebuild switch --flake .#pc
 ```
 
-(or `srv`, depending on the host)
-
-### 🐧 Non-NixOS systems
-
-On non-NixOS systems, user environments are activated via `homeConfigurations`.
-
-To apply a Home Manager configuration, use:
-
-```bash
-home-manager switch --flake .#segabass65@pc
-```
-
-(or `segabass65@srv`, depending on the target host)
-
-Each Home Manager configuration must match its corresponding host to ensure access to the correct system configuration context.
+*or `srv`, depending on the host*
