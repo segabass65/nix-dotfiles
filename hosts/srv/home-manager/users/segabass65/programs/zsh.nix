@@ -1,1 +1,0 @@
-../../../../../pc/home-manager/users/segabass65/programs/zsh.nix

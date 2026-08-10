@@ -32,7 +32,7 @@ You are welcome to reuse parts of it, but expect to adapt and modify it to fit y
 |                    | 👤 segabass65@pc | 👤 segabass65@srv |
 | -------------------| ---------------- | ----------------- |
 | 👣 **DE**          | ⭐ GNOME         | ⭐ None           |
-| 🚀 **Shell**       | Zsh              | Zsh               |
+| 🚀 **Shell**       | Fish             | Fish              |
 | 🐧 **Kernel**      | ⭐ Zen           | ⭐ Linux          |
 | 📝 **Text Editor** | Neovim           | Neovim            |
 

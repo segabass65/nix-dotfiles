@@ -1,12 +1,12 @@
 { pkgs, ... }: with pkgs; {
   users.users = {
-    root.shell = zsh;
+    root.shell = fish;
 
     segabass65 = {
       description = "SegaBASS";
       extraGroups = [ "wheel" ];
       isNormalUser = true;
-      shell = zsh;
+      shell = fish;
     };
   };
 }
