@@ -4,6 +4,5 @@
     ./home.nix
     ./programs
     nix-flatpak.homeManagerModules.nix-flatpak
-    nixvim.homeModules.nixvim
   ];
 }

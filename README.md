@@ -10,7 +10,7 @@ You are welcome to reuse parts of it, but expect to adapt and modify it to fit y
 ## 🔍 Overview
 
 > [!WARNING]
-> This screenshot only showcases the DE and the text editor. Any other applications or tools shown may not be included in the repository, as they were installed non-declaratively.
+> This screenshot only showcases the DE. Any other applications or tools shown may not be included in the repository, as they were installed non-declaratively.
 
 ![screenshot](assets/screenshot.png)
 
@@ -34,7 +34,7 @@ You are welcome to reuse parts of it, but expect to adapt and modify it to fit y
 | 👣 **DE**          | ⭐ GNOME         | ⭐ None           |
 | 🚀 **Shell**       | Fish             | Fish              |
 | 🐧 **Kernel**      | ⭐ Zen           | ⭐ Linux          |
-| 📝 **Text Editor** | Neovim           | Neovim            |
+| 📝 **Text Editor** | Helix            | Helix             |
 
   </tr>
 </table>

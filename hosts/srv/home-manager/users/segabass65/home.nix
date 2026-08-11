@@ -6,7 +6,9 @@
       cmatrix
       git-filter-repo
       htop
+      nixd
       ouch
+      ruff
       termdown
       tree
       tty-clock
