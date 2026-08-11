@@ -9,9 +9,7 @@
       nixd
       ouch
       ruff
-      termdown
       tree
-      tty-clock
       unrar
     ];
 
