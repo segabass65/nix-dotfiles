@@ -14,7 +14,6 @@
     self,
     nixpkgs,
     nixpkgs-2205,
-    home-manager,
     ...
   } @ inputs: {
 
@@ -27,8 +26,8 @@
       nixosSystem = {
         nixpkgs,
         hostName,
-        nixpkgsAttrs ? {},
-        specialArgs ? {}
+        nixpkgsAttrs ? { },
+        specialArgs ? { }
       }: nixpkgs.lib.nixosSystem {
         modules = [
           {
