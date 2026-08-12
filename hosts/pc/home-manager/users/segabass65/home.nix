@@ -8,9 +8,7 @@
       pkgs.corefonts
       pkgs.git-filter-repo
       pkgs.htop
-      pkgs.nixd
       pkgs.ouch
-      pkgs.ruff
       pkgs.tree
       pkgs.unrar
       pkgs.wl-clipboard

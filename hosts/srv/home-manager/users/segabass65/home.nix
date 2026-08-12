@@ -6,9 +6,7 @@
       cmatrix
       git-filter-repo
       htop
-      nixd
       ouch
-      ruff
       tree
       unrar
     ];
