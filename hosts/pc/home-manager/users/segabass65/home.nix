@@ -7,6 +7,7 @@
       pkgs.cmatrix
       pkgs.corefonts
       pkgs.git-filter-repo
+      pkgs.gnome-tweaks
       pkgs.htop
       pkgs.ouch
       pkgs.tree
