@@ -8,6 +8,11 @@
       pkgs.corefonts
       pkgs.git-filter-repo
       pkgs.gnome-tweaks
+      pkgs.gnomeExtensions.alphabetical-app-grid
+      pkgs.gnomeExtensions.appindicator
+      pkgs.gnomeExtensions.applications-menu
+      pkgs.gnomeExtensions.blur-my-shell
+      pkgs.gnomeExtensions.screentospace
       pkgs.htop
       pkgs.ouch
       pkgs.tree
