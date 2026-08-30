@@ -58,7 +58,10 @@
       pc = let
         nixpkgsAttrs = {
           system = "x86_64-linux";
-          config.allowUnfree = true;
+          config = {
+            allowUnfree = true;
+            permittedInsecurePackages = [ "ventoy-gtk3-1.1.12" ];
+          };
         };
 
       in nixosSystem {

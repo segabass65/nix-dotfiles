@@ -14,6 +14,7 @@
       pkgs.ouch
       pkgs.tree
       pkgs.unrar
+      pkgs.ventoy-full-gtk
       pkgs.wl-clipboard
       pkgs2205.ciscoPacketTracer8
     ];
