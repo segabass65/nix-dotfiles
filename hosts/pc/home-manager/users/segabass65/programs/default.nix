@@ -5,6 +5,7 @@
   ];
 
   programs = {
+    cava.enable = true;
     fastfetch.enable = true;
     fish.enable = true;
     gh.enable = true;
