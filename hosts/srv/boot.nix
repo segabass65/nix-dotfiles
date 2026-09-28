@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: {
+{ config, ... }: {
   boot = {
     extraModulePackages = [ config.boot.kernelPackages.yt6801 ];
 
@@ -12,7 +12,6 @@
     ];
 
     kernelModules = [ "yt6801" ];
-    kernelPackages = pkgs.linuxPackages_latest;
     loader.systemd-boot.enable = true;
   };
 }

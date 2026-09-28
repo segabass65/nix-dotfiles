@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
   boot = {
     blacklistedKernelModules = [ "nouveau" ];
 
@@ -12,7 +12,6 @@
     ];
 
     kernelModules = [ "kvm-intel" ];
-    kernelPackages = pkgs.linuxPackages_zen;
     loader.systemd-boot.enable = true;
   };
 }
