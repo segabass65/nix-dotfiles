@@ -33,7 +33,7 @@ You are welcome to reuse parts of it, but expect to adapt and modify it to fit y
 | -------------------| ---------------- | ----------------- |
 | 👣 **DE**          | ⭐ GNOME         | ⭐ None           |
 | 🚀 **Shell**       | Fish             | Fish              |
-| 🐧 **Kernel**      | ⭐ Zen           | ⭐ Linux          |
+| 🐧 **Kernel**      | LTS              | LTS               |
 | 📝 **Text Editor** | Helix            | Helix             |
 
   </tr>
