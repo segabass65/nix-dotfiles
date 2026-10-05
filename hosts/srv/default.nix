@@ -5,6 +5,7 @@
     ./console.nix
     ./file-systems.nix
     ./home-manager
+    ./services
     ./users.nix
     home-manager.nixosModules.home-manager
   ];
