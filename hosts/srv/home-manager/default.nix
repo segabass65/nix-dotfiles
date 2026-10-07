@@ -7,7 +7,7 @@
     extraSpecialArgs = {
       inherit inputs inputPkgs;
     };
-    
+
     useGlobalPkgs = true;
     useUserPackages = true;
   };

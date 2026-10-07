@@ -8,7 +8,7 @@
       inherit inputs inputPkgs;
       inherit pkgs2205;
     };
-    
+
     useGlobalPkgs = true;
     useUserPackages = true;
   };
