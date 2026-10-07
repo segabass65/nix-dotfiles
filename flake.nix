@@ -85,6 +85,15 @@
 
         hostName = "srv";
       };
+
+      vm = let
+        nixpkgsAttrs.system = "x86_64-linux";
+
+      in nixosSystem {
+        inherit nixpkgs nixpkgsAttrs;
+
+        hostName = "vm";
+      };
     };
   };
 }
