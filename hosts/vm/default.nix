@@ -1,6 +1,6 @@
 { inputs, modulesPath, ... }: {
   imports = with inputs; [
-    (modulesPath + "/profiles/qemu-quest.nix")
+    (modulesPath + "/profiles/qemu-guest.nix")
     ./boot.nix
     ./console.nix
     ./file-systems.nix
