@@ -2,6 +2,7 @@
   imports = with inputs; [ # noqa
     ./home.nix
     ./programs
+    ./sxhkd.nix
   ];
 
   xsession = {
