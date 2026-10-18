@@ -1,8 +1,9 @@
-{ config, osConfig, pkgs, pkgs2205, ... }: {
+{ config, inputPkgs, osConfig, pkgs, pkgs2205, ... }: {
   home = {
     homeDirectory = "/home/${config.home.username}";
 
     packages = [
+      inputPkgs.easyspeak
       pkgs.android-tools
       pkgs.aseprite
       pkgs.cmatrix
