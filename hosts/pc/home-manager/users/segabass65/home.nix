@@ -12,6 +12,7 @@
       pkgs.gnomeExtensions.alphabetical-app-grid
       pkgs.gnomeExtensions.screentospace
       pkgs.htop
+      pkgs.imagemagick
       pkgs.ouch
       pkgs.tree
       pkgs.universal-android-debloater
