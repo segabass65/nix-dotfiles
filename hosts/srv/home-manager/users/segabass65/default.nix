@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  imports = with inputs; [
+  imports = with inputs; [ # noqa
     ./home.nix
     ./programs
   ];
