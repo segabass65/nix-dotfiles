@@ -11,6 +11,12 @@
 
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   programs.fish.enable = true;
+
+  services.xserver = {
+    enable = true;
+    displayManager.startx.enable = true;
+  };
+
   system.stateVersion = "26.05";
   time.timeZone = "Europe/Moscow";
 }
