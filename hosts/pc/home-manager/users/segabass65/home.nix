@@ -5,7 +5,6 @@
     packages = [
       inputPkgs.easyspeak
       pkgs.android-tools
-      pkgs.aseprite
       pkgs.cmatrix
       pkgs.corefonts
       pkgs.git-filter-repo
