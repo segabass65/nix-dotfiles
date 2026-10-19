@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   imports = [
     ./git.nix
     ./helix.nix
@@ -8,7 +8,12 @@
     cava.enable = true;
     fastfetch.enable = true;
     fish.enable = true;
-    gh.enable = true;
+
+    gh = {
+      enable = true;
+      extensions = [ pkgs.gh-markdown-preview ];
+    };
+
     lazygit.enable = true;
     lf.enable = true;
   };
