@@ -5,6 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-2205.url = "github:nixos/nixpkgs/nixos-22.05";
 
+    utils.url = "github:numtide/flake-utils";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
     easyspeak.url = "github:ctsdownloads/easyspeak";
@@ -14,10 +15,15 @@
     self,
     nixpkgs,
     nixpkgs-2205,
+    utils,
     easyspeak,
     ...
-  } @ inputs: {
+  } @ inputs: utils.lib.eachDefaultSystem (system: let
+    pkgs = nixpkgs.legacyPackages.${system};
 
+  in {
+    devShells.default = import ./shell.nix { inherit pkgs; };
+  }) // {
     lib = {
 
       # Helper to simplify NixOS host configuration setup.
