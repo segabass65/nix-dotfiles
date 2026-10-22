@@ -15,5 +15,10 @@
       device = "/dev/disk/by-label/NIXHOME";
       fsType = "ext4";
     };
+
+    "/srv/public" = {
+      device = "/dev/disk/by-label/PUBLIC";
+      fsType = "ext4";
+    };
   };
 }
