@@ -1,6 +1,7 @@
 { ... }: {
   imports = [
     ./minecraft-server.nix
+    ./samba.nix
     ./yggdrasil.nix
   ];
 
