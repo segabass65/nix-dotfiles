@@ -13,7 +13,6 @@
   hardware.cpu.amd.updateMicrocode = true;
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   programs.fish.enable = true;
-  services.openssh.enable = true;
   system.stateVersion = "26.05";
   time.timeZone = "Europe/Moscow";
 }
