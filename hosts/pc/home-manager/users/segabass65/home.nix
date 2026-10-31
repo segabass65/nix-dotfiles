@@ -9,8 +9,6 @@
       pkgs.corefonts
       pkgs.git-filter-repo
       pkgs.gnome-tweaks
-      pkgs.gnomeExtensions.alphabetical-app-grid
-      pkgs.gnomeExtensions.screentospace
       pkgs.htop
       pkgs.imagemagick
       pkgs.ouch
